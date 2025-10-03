@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="5" verbose="2" parallel="tests">
+	<!-- <test thread-count="5" name="Base test" verbose="4" parallel="tests"> 
+		<classes> <class name="com.qa.seleniumframework.base.BaseTest"/> </classes> 
+		</test> -->
+	<listeners>
+		<listener class-name = "com.qa.seleniumframework.listener.TestAllureListner"/>
+		<listener class-name = "com.qa.seleniumframework.listener.AnnotationTransfermer"/>
+	</listeners>
+
+	<test name="Login page" thread-count="3">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.seleniumframework.tests.LoginPageTest" />
+		</classes>
+	</test>
+
+	<test name="Account Page">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.qa.seleniumframework.tests.AccoutPageTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Base test">
+    <classes>
+      <class name="com.qa.seleniumframework.base.BaseTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name = "Login page">
+  	<classes>
+  		<class name="com.qa.seleniumframework.tests.LoginPageTest"/>
+  	</classes>
+  </test>
+</suite> <!-- Suite -->
